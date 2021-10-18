@@ -1,18 +1,26 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { PrivateRoute } from "./components";
+import { BACKTEST_PATH, HOME_PATH, LOGIN_PATH, SIGNUP_PATH } from './constants';
+import { AuthProvider } from "./contexts/AuthContext";
 import GlobalStyles from './Globalstyles';
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Signup from "./pages/SignUp";
+import { Backtest, Home, Login, Signup } from './pages';
+
 function App() {
+
   return (
-    <Router>
-      <GlobalStyles />
-      <Switch>
-        <Route exact path="/" exact component={Home} />
-        <Route exact path="/login" exact component={Login} />
-        <Route exact path="/signup" exact component={Signup} />
-      </Switch>
-    </Router>
+    <AuthProvider>
+      <BrowserRouter>
+        <GlobalStyles />
+
+        <Switch>
+          <Route exact path={HOME_PATH} component={Home} />
+          <Route path={LOGIN_PATH} exact component={Login} />
+          <Route path={SIGNUP_PATH} exact component={Signup} />
+          <PrivateRoute path={BACKTEST_PATH} exact component={Backtest} />
+        </Switch>
+
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 

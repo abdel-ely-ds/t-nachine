@@ -57,19 +57,12 @@ width: 100%;
 }
 `;
 
-export const Button = styled.button`
-border-radius: 50px;
-color: ${({ primary }) => primary ? '#fff' : '#000'};
-padding: ${({ big }) => big ? '12px 16px' : '8px 12px'};
-font-size: 16px;
-outline: none;
-cursor: pointer;
-border: none;
-background-color: ${({ primary }) => primary ? '#007afc' : '#fff'}; 
-transition: all .5s ease;
-
-&:hover{
-    background-color: ${({ primary }) => primary ? '#3898ec' : '#fff'}; 
-}
+export const heading = styled.h1`
+font-size: 40px;
+line-height: 44px;
+letter-spacing: 0.5px;
+font-weight: 600px;
+display: block;
 `;
+
 <GlobalStyles />

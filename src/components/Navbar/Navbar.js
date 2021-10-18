@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { IconContext } from "react-icons";
-import { Button } from '../../Globalstyles';
+import { Button, Link } from '..';
 import {
-    AnalysisIcon, ArrowDown, ArrowUp, BacktestIcon, DocsIcon, DropDownContent, Menu, MenuItem, MenuItemBtn, MenuItemDropDown, MenuLink, MenuLinkBtn, Nav,
-    NavbarContainer, NavLogo, OptimizationIcon, PricingIcon, ServicesIcon
+    AnalysisIcon, ArrowDown, ArrowUp, BacktestIcon,
+    DocsIcon, OptimizationIcon, PricingIcon, ServicesIcon
+} from '../Icons/Icons';
+import {
+    DropDownContent, Menu, MenuItem, MenuItemBtn, MenuItemDropDown, MenuLink, Nav,
+    NavbarContainer, NavLogo
 } from './Navbar.styles';
-
 
 
 const Navbar = () => {
@@ -36,7 +39,7 @@ const Navbar = () => {
 
                                 </MenuItem>
                                 <DropDownContent>
-                                    <MenuLink to="/"><BacktestIcon />Backtesting</MenuLink>
+                                    <MenuLink to="/backtest"><BacktestIcon />Backtesting</MenuLink>
                                     <MenuLink to="/"><AnalysisIcon />Extensive Analysis</MenuLink>
                                     <MenuLink to="/"><OptimizationIcon />Optimization</MenuLink>
                                 </DropDownContent>
@@ -56,26 +59,23 @@ const Navbar = () => {
                                 </DropDownContent>
                             </MenuItemDropDown>
 
-
-
                             <MenuItem>
-                                <MenuLink to="/pricing"><PricingIcon />Princing</MenuLink>
+                                <MenuLink to="/pricing"><PricingIcon />Pricing</MenuLink>
                             </MenuItem>
 
                         </Menu>
 
                         <Menu>
-
                             <MenuItemBtn>
-                                <MenuLinkBtn to="/login">
+                                <Link to="/login">
                                     <Button>Log in</Button>
-                                </MenuLinkBtn>
+                                </Link>
                             </MenuItemBtn>
 
                             <MenuItemBtn>
-                                <MenuLinkBtn to="/signup">
+                                <Link to="/signup">
                                     <Button primary>Sign up</Button>
-                                </MenuLinkBtn>
+                                </Link>
                             </MenuItemBtn>
 
                         </Menu>
@@ -87,5 +87,4 @@ const Navbar = () => {
         </div >
     )
 }
-
 export default Navbar;

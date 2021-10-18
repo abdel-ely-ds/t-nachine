@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
-import { Button } from "../../Globalstyles";
-import { BacktestMode, BacktestModeBtn, BannerContainer, CodeSampleContainer, CodeSampleName, FreeTrial, HeroLeft, HeroRight, Title, TitleDetails } from "./Banner.styles";
+import { useState } from 'react';
+import { Button, Link } from '..';
+import {
+    BacktestMode, BacktestModeBtn, BannerContainer,
+    CodeSampleContainer, CodeSampleName, FreeTrial, HeroLeft, HeroRight, Title, TitleDetails
+} from "./Banner.styles";
 
 const Banner = () => {
 
@@ -22,9 +25,9 @@ const Banner = () => {
 
                 <FreeTrial>
 
-                    <Button primary big>
-                        Start backtesting for free
-                    </Button>
+                    <Link to="/signup">
+                        <Button primary big>Start backtesting for free</Button>
+                    </Link>
 
                 </FreeTrial>
 
