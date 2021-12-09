@@ -7,10 +7,7 @@ export { default as CardInput } from "./Card/CardInput";
 export { default as CardOptions } from "./Card/CardOptions";
 export { default as CardWrapper } from "./Card/CardWrapper";
 export { default as Link } from "./Link/Link";
-export { default as Navbar } from "./Navbar/Navbar";
+export { default as Navbar } from "./Navbar/HomeNavbar";
+export { default as InNavbar } from "./Navbar/InNavbar";
 export { default as PrivateRoute } from "./Route/PrivateRoute";
-
-
-
-
-
+export { default as CustomizedTable } from "./Table/Table";
