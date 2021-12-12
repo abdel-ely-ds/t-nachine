@@ -83,14 +83,8 @@ const InNavbar = () => {
                   </MenuLink>
                 </MenuItem>
                 <DropDownContent>
-                  <MenuLink to="/">
-                    <BacktestIcon />
-                    Write Your Custom Strategy
-                  </MenuLink>
-                  <MenuLink to="/">
-                    <AnalysisIcon />
-                    Declare Your Custom Indicators
-                  </MenuLink>
+                  <MenuLink to="/">Write Your Custom Strategy</MenuLink>
+                  <MenuLink to="/">Declare Your Custom Indicators</MenuLink>
                 </DropDownContent>
               </MenuItemDropDown>
 

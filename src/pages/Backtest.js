@@ -1,26 +1,25 @@
-import Switch from "@material-ui/core/Switch";
 import "ace-builds/src-noconflict/ace";
 import "ace-builds/src-noconflict/mode-python";
 import "ace-builds/src-noconflict/theme-github";
+import React, { useRef, useState } from "react";
 import AceEditor from "react-ace";
 import { useHistory } from "react-router";
 import Select from "react-select";
 import {
   Button,
-  LinearIndeterminate,
   CustomizedTable,
+  EditorContainer,
+  HeroLeft,
+  HeroRight,
   InNavbar,
+  LinearIndeterminate,
   PlaygroundContainer,
   PlaygroundHeader,
+  PlaygroundOptions,
   PlaygroundTitle,
-  EditorContainer,
-  HeroRight,
-  HeroLeft,
   ResultsContainer,
 } from "../components";
-import { InputLabel, OutlinedInput, InputAdornment } from "@material-ui/core";
 import { useAuth } from "../contexts/AuthContext";
-import React, { useState, useRef } from "react";
 
 const options = [
   { value: "msft", label: "Microsoft" },
@@ -68,17 +67,6 @@ const Backtest = () => {
       <InNavbar />
       <PlaygroundHeader>
         <PlaygroundTitle>Playground</PlaygroundTitle>
-        <Select
-          options={options}
-          value={options.find((obj) => obj.value === stockName)}
-          onChange={(e) => setStockName(e.value)}
-        />
-        <InputLabel htmlFor="outlined-adornment-amount">Amount</InputLabel>
-        <OutlinedInput
-          id="outlined-adornment-amount"
-          startAdornment={<InputAdornment position="start">$</InputAdornment>}
-          label="Amount"
-        />
       </PlaygroundHeader>
 
       <PlaygroundContainer>
@@ -111,6 +99,13 @@ const Backtest = () => {
         </HeroLeft>
 
         <HeroRight>
+          <PlaygroundOptions>
+            <Select
+              options={options}
+              onChange={(e) => setStockName(e.value)}
+              placeholder="Choose stock"
+            />
+          </PlaygroundOptions>
           <ResultsContainer>
             {loading ? <LinearIndeterminate /> : <></>}
             {error ? <div> someting went wrong... :(</div> : <></>}

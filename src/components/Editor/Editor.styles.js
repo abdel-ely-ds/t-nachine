@@ -8,19 +8,20 @@ export const PlaygroundContainer = styled.div`
 export const PlaygroundHeader = styled.div`
   padding-left: 50px;
   padding-right: 60px;
-  margin: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
 `;
 
 export const PlaygroundTitle = styled.h1`
   font-size: 20px;
   font-weight: 600px;
-  height: 60px;
-  display: flex;
+`;
+
+export const PlaygroundOptions = styled.div`
+  display: block;
   justify-content: space-between;
-  align-items: center;
 `;
 
 export const EditorContainer = styled.div`
@@ -45,14 +46,15 @@ export const HeroLeft = styled.div`
   float: left;
   display: block;
   width: 70%;
-  height: 50%;
+  height: 40%;
   padding-left: 50px;
   overflow: hidden;
 `;
 
 export const ResultsContainer = styled.div`
   margin-top: 10px;
-  height: 100%;
+  height: 80%;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 `;
