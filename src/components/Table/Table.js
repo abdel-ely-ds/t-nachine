@@ -12,23 +12,25 @@ const CustomizedTable = ({ rows }) => {
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Dessert (100g serving)</StyledTableCell>
-            <StyledTableCell align="right">Calories</StyledTableCell>
-            <StyledTableCell align="right">Fat&nbsp;(g)</StyledTableCell>
-            <StyledTableCell align="right">Carbs&nbsp;(g)</StyledTableCell>
-            <StyledTableCell align="right">Protein&nbsp;(g)</StyledTableCell>
+            <StyledTableCell>EntryTime</StyledTableCell>
+            <StyledTableCell align="right">ExitTime</StyledTableCell>
+            <StyledTableCell align="right">Size</StyledTableCell>
+            <StyledTableCell align="right">EntryPrice ($)</StyledTableCell>
+            <StyledTableCell align="right">ExitPrice ($)</StyledTableCell>
+            <StyledTableCell align="right">PnL ($)</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <StyledTableRow key={row.name}>
+          {rows.map((row, i) => (
+            <StyledTableRow key={i}>
               <StyledTableCell component="th" scope="row">
-                {row.name}
+                {row.EntryTime}
               </StyledTableCell>
-              <StyledTableCell align="right">{row.calories}</StyledTableCell>
-              <StyledTableCell align="right">{row.fat}</StyledTableCell>
-              <StyledTableCell align="right">{row.carbs}</StyledTableCell>
-              <StyledTableCell align="right">{row.protein}</StyledTableCell>
+              <StyledTableCell align="right">{row.ExitTime}</StyledTableCell>
+              <StyledTableCell align="right">{row.Size}</StyledTableCell>
+              <StyledTableCell align="right">{row.EntryPrice}</StyledTableCell>
+              <StyledTableCell align="right">{row.ExitPrice}</StyledTableCell>
+              <StyledTableCell align="right">{row.PnL}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
