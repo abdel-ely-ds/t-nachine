@@ -46,15 +46,22 @@ export const HeroLeft = styled.div`
   float: left;
   display: block;
   width: 70%;
-  height: 40%;
   padding-left: 50px;
-  overflow: hidden;
 `;
 
 export const ResultsContainer = styled.div`
-  margin-top: 10px;
-  height: 80%;
+  margin-top: 20px;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+`;
+
+export const ResultsHeader = styled.span`
+  dispaly: block;
+  font-size: 22px;
+  font-weight: 400;
+  color: White;
+  background-color: rgb(48, 13, 79);
+  padding: 7px;
+  padding-left: 12px;
+  padding-right: 12px;
 `;

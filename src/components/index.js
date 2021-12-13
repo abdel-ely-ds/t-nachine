@@ -15,6 +15,7 @@ export {
   PlaygroundOptions,
   PlaygroundTitle,
   ResultsContainer,
+  ResultsHeader,
 } from "./Editor/Editor.styles";
 export { default as Link } from "./Link/Link";
 export { default as LinearIndeterminate } from "./Loading/Loading";

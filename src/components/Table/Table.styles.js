@@ -4,20 +4,18 @@ import TableRow from "@mui/material/TableRow";
 
 export const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
+    display: "inline-block",
+    fontSize: "20px",
+    padding: "10px",
+    paddingLeft: "12px",
+    backgroundColor: "rgb(48, 13, 79)",
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
-    fontSize: 14,
+    fontSize: 20,
+    paddingLeft: "12px",
+    paddingRight: "12px",
   },
 }));
 
-export const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  "&:nth-of-type(odd)": {
-    backgroundColor: theme.palette.action.hover,
-  },
-  // hide last border
-  "&:last-child td, &:last-child th": {
-    border: 0,
-  },
-}));
+export const StyledTableRow = styled(TableRow)(({ theme }) => ({}));
