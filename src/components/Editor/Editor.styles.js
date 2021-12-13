@@ -58,7 +58,7 @@ export const ResultsContainer = styled.div`
 export const ResultsHeader = styled.span`
   dispaly: block;
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 500;
   color: White;
   background-color: rgb(48, 13, 79);
   padding: 7px;

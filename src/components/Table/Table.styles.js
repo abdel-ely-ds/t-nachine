@@ -5,7 +5,6 @@ import TableRow from "@mui/material/TableRow";
 export const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     display: "inline-block",
-    fontSize: "20px",
     padding: "10px",
     paddingLeft: "12px",
     backgroundColor: "rgb(48, 13, 79)",
