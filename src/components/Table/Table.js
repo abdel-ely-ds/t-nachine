@@ -12,18 +12,43 @@ import {
 
 const CustomizedTable = ({ rows }) => {
   return (
-    <Paper
-      sx={{
-        width: "100%",
-        overflow: "auto",
-        border: "solid",
-        borderColor: "rgb(48, 13, 79)",
-        borderWidth: "3px",
-      }}
-    >
-      <TableContainer sx={{ maxHeight: 588 }}>
-        <Table>
+    <Paper>
+      <TableContainer
+        sx={{
+          width: "100%",
+          height: "100%",
+          border: "solid",
+          borderColor: "rgb(48, 13, 79)",
+          borderWidth: "1px",
+          borderRadius: "0",
+          overflow: "auto",
+          maxHeight: "70vh",
+        }}
+      >
+        <Table stickyHeader>
+          <TableHead>
+            <TableRow>
+              <StyledTableCell>Results</StyledTableCell>
+              <StyledTableCell></StyledTableCell>
+            </TableRow>
+          </TableHead>
           <TableBody>
+            <StyledTableRow>
+              <StyledTableCell component="th" scope="row">
+                Average exposure time
+              </StyledTableCell>
+              <StyledTableCell component="th" scope="row">
+                {rows.average_duration} Days
+              </StyledTableCell>
+            </StyledTableRow>
+            <StyledTableRow>
+              <StyledTableCell component="th" scope="row">
+                Average exposure time
+              </StyledTableCell>
+              <StyledTableCell component="th" scope="row">
+                {rows.average_duration} Days
+              </StyledTableCell>
+            </StyledTableRow>
             <StyledTableRow>
               <StyledTableCell component="th" scope="row">
                 Average exposure time

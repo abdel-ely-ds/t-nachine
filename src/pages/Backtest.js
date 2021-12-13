@@ -16,10 +16,11 @@ import {
   LinearIndeterminate,
   PlaygroundContainer,
   PlaygroundHeader,
-  PlaygroundOptions,
+  PlaygroundOptionsContainer,
+  PlaygroundHeaderItemWrapper,
   PlaygroundTitle,
   ResultsContainer,
-  ResultsHeader,
+  ButtonContainer,
 } from "../components";
 import { useAuth } from "../contexts/AuthContext";
 import axios from "axios";
@@ -70,58 +71,62 @@ const Backtest = () => {
     <>
       <InNavbar />
       <PlaygroundHeader>
-        <PlaygroundTitle>Playground</PlaygroundTitle>
-      </PlaygroundHeader>
-
-      <PlaygroundContainer>
-        <HeroLeft>
-          <EditorContainer>
-            <AceEditor
-              mode="python"
-              theme="github"
-              placeholder="Start Writting your strategy"
-              height="70vh"
-              width="100%"
-              fontSize={11}
-              showPrintMargin={false}
-              showGutter={true}
-              highlightActiveLine={false}
-              editorProps={{ $blockScrolling: true }}
-              setOptions={{
-                enableBasicAutocompletion: true,
-                enableLiveAutocompletion: true,
-                enableSnippets: true,
-                showLineNumbers: true,
-                tabSize: 4,
-              }}
-              ref={editorRef}
-            />
-          </EditorContainer>
-          <Button onClick={handleClick} primary special>
-            Backtest
-          </Button>
-        </HeroLeft>
-
-        <HeroRight>
-          <PlaygroundOptions>
+        <PlaygroundHeaderItemWrapper>
+          <PlaygroundTitle>Playground</PlaygroundTitle>
+        </PlaygroundHeaderItemWrapper>
+        <PlaygroundOptionsContainer>
+          <PlaygroundHeaderItemWrapper>
             <Select
+              styles={{
+                // Fixes the overlapping problem of the component
+                menu: (provided) => ({ ...provided, zIndex: 9999 }),
+              }}
               options={options}
               onChange={(e) => setStockName(e.value)}
               placeholder="Choose a stock"
             />
-          </PlaygroundOptions>
+          </PlaygroundHeaderItemWrapper>
+        </PlaygroundOptionsContainer>
+      </PlaygroundHeader>
+
+      <PlaygroundContainer>
+        <EditorContainer>
+          <AceEditor
+            mode="python"
+            theme="github"
+            placeholder="Start Writting your strategy"
+            width="100%"
+            height="100%"
+            fontSize={11}
+            showPrintMargin={false}
+            showGutter={true}
+            highlightActiveLine={false}
+            editorProps={{ $blockScrolling: true }}
+            setOptions={{
+              enableBasicAutocompletion: true,
+              enableLiveAutocompletion: true,
+              enableSnippets: true,
+              showLineNumbers: true,
+              tabSize: 4,
+            }}
+            ref={editorRef}
+          />
+        </EditorContainer>
+        <ResultsContainer>
           {loading ? <LinearIndeterminate /> : <></>}
           {error ? <div> someting went wrong... :(</div> : <></>}
           {Object.keys(results).length > 0 && !error && !loading ? (
-            <ResultsContainer>
-              <ResultsHeader>Results</ResultsHeader>
-              <CustomizedTable rows={results} />
-            </ResultsContainer>
+            <CustomizedTable rows={results} />
           ) : (
             <></>
           )}
-        </HeroRight>
+        </ResultsContainer>
       </PlaygroundContainer>
+      <ButtonContainer>
+        <Button onClick={handleClick} primary special>
+          Backtest
+        </Button>
+      </ButtonContainer>
     </>
   );
 };

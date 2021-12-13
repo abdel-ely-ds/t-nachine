@@ -8,14 +8,14 @@ export { default as CardOptions } from "./Card/CardOptions";
 export { default as CardWrapper } from "./Card/CardWrapper";
 export {
   EditorContainer,
-  HeroLeft,
-  HeroRight,
   PlaygroundContainer,
   PlaygroundHeader,
-  PlaygroundOptions,
+  PlaygroundOptionsContainer,
+  PlaygroundHeaderItemWrapper,
   PlaygroundTitle,
   ResultsContainer,
-  ResultsHeader,
+  ResultsTitle,
+  ButtonContainer,
 } from "./Editor/Editor.styles";
 export { default as Link } from "./Link/Link";
 export { default as LinearIndeterminate } from "./Loading/Loading";

@@ -4,16 +4,14 @@ import TableRow from "@mui/material/TableRow";
 
 export const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    display: "inline-block",
-    padding: "10px",
-    paddingLeft: "12px",
+    border: "none",
     backgroundColor: "rgb(48, 13, 79)",
+    fontSize: 20,
+    fontWeight: 500,
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
     fontSize: 20,
-    paddingLeft: "12px",
-    paddingRight: "12px",
   },
 }));
 
