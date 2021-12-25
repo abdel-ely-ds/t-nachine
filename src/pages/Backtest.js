@@ -22,6 +22,7 @@ import {
   ResultsContainer,
   ButtonContainer,
 } from "../components";
+import { dummyStrategy } from "../constants";
 import { useAuth } from "../contexts/AuthContext";
 import axios from "axios";
 
@@ -36,7 +37,7 @@ const endPoint = "/backtest";
 const Backtest = () => {
   const { logout } = useAuth();
   const history = useHistory();
-  const editorRef = useRef();
+  const [code, setCode] = useState(dummyStrategy);
   const [stockName, setStockName] = useState("msft");
   const [results, setResults] = useState({});
   const [loading, setLoading] = useState(false);
@@ -51,7 +52,7 @@ const Backtest = () => {
       url: endPoint,
       headers: { "Content-Type": "application/json" },
       data: {
-        strategy_code: editorRef.value,
+        strategy_code: code,
         stock_name: stockName,
       },
     };
@@ -97,7 +98,7 @@ const Backtest = () => {
             placeholder="Start Writting your strategy"
             width="100%"
             height="100%"
-            fontSize={11}
+            fontSize={16}
             showPrintMargin={false}
             showGutter={true}
             highlightActiveLine={false}
@@ -109,7 +110,8 @@ const Backtest = () => {
               showLineNumbers: true,
               tabSize: 4,
             }}
-            ref={editorRef}
+            onChange={(value) => setCode(value)}
+            defaultValue={code}
           />
         </EditorContainer>
         <ResultsContainer>

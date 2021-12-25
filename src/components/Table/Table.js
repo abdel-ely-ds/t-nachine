@@ -41,22 +41,7 @@ const CustomizedTable = ({ rows }) => {
                 {rows.average_duration} Days
               </StyledTableCell>
             </StyledTableRow>
-            <StyledTableRow>
-              <StyledTableCell component="th" scope="row">
-                Average exposure time
-              </StyledTableCell>
-              <StyledTableCell component="th" scope="row">
-                {rows.average_duration} Days
-              </StyledTableCell>
-            </StyledTableRow>
-            <StyledTableRow>
-              <StyledTableCell component="th" scope="row">
-                Average exposure time
-              </StyledTableCell>
-              <StyledTableCell component="th" scope="row">
-                {rows.average_duration} Days
-              </StyledTableCell>
-            </StyledTableRow>
+
             <StyledTableRow>
               <StyledTableCell component="th" scope="row">
                 Number of trades
@@ -73,6 +58,7 @@ const CustomizedTable = ({ rows }) => {
                 {100 * rows.win_rate} %
               </StyledTableCell>
             </StyledTableRow>
+
             <StyledTableRow>
               <StyledTableCell component="th" scope="row">
                 Average risk to reward
@@ -81,6 +67,7 @@ const CustomizedTable = ({ rows }) => {
                 {rows.profit_factor}
               </StyledTableCell>
             </StyledTableRow>
+
             <StyledTableRow>
               <StyledTableCell component="th" scope="row">
                 Return
@@ -89,6 +76,7 @@ const CustomizedTable = ({ rows }) => {
                 {100 * rows.return_pct} %
               </StyledTableCell>
             </StyledTableRow>
+
             <StyledTableRow>
               <StyledTableCell component="th" scope="row">
                 Return of best trade
@@ -97,6 +85,7 @@ const CustomizedTable = ({ rows }) => {
                 {rows.best_trade} €
               </StyledTableCell>
             </StyledTableRow>
+
             <StyledTableRow>
               <StyledTableCell component="th" scope="row">
                 Return of worst trade
@@ -105,14 +94,7 @@ const CustomizedTable = ({ rows }) => {
                 {rows.worst_trade} €
               </StyledTableCell>
             </StyledTableRow>
-            <StyledTableRow>
-              <StyledTableCell component="th" scope="row">
-                Return of worst trade
-              </StyledTableCell>
-              <StyledTableCell component="th" scope="row">
-                {rows.worst_trade} €
-              </StyledTableCell>
-            </StyledTableRow>
+
             <StyledTableRow>
               <StyledTableCell component="th" scope="row">
                 Probability of 10 losing streaks
@@ -121,6 +103,7 @@ const CustomizedTable = ({ rows }) => {
                 {100 * rows.lost_10_streak} %
               </StyledTableCell>
             </StyledTableRow>
+
             <StyledTableRow>
               <StyledTableCell component="th" scope="row">
                 Probability of 10 winning streaks
