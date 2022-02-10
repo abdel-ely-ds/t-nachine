@@ -29,7 +29,7 @@ export const NavLogo = styled(Link)`
   align-items: center;
   text-decoration: none;
   font-size: 20px;
-  font-weight: 800;
+  font-weight: bold;
   transition: all 0.5s ease;
   &:hover {
     color: #3195ff;

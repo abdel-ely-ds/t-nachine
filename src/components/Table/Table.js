@@ -23,6 +23,7 @@ const CustomizedTable = ({ rows }) => {
           borderRadius: "0",
           overflow: "auto",
           maxHeight: "70vh",
+          marginBottom: "20px",
         }}
       >
         <Table stickyHeader>

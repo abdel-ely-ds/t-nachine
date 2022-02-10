@@ -25,6 +25,7 @@ import {
 import { dummyStrategy } from "../constants";
 import { useAuth } from "../contexts/AuthContext";
 import axios from "axios";
+import ReactStoreIndicator from "react-score-indicator";
 
 const options = [
   { value: "msft", label: "Microsoft" },
@@ -122,6 +123,7 @@ const Backtest = () => {
           ) : (
             <></>
           )}
+          <ReactStoreIndicator value={30} maxValue={100} />
         </ResultsContainer>
       </PlaygroundContainer>
       <ButtonContainer>

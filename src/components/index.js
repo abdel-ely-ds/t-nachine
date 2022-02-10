@@ -1,4 +1,5 @@
 export { default as Banner } from "./Banner/Banner";
+export { default as Features } from "./Features/Features";
 export { default as Button } from "./Button/Button";
 export { default as CardBody } from "./Card/CardBody";
 export { default as CardFieldset } from "./Card/CardFieldset";

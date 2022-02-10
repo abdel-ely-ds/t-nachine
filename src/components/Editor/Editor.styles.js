@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const PlaygroundContainer = styled.div`
   display: flex;
-  position: relative;
   justify-content: space-between;
   align-items: center;
   padding-left: 95px;
@@ -48,6 +47,7 @@ export const ResultsContainer = styled.div`
   height: 70vh;
   width: 35vw;
   margin-left: 10px;
+  display: block;
 `;
 
 export const ResultsTitle = styled.span`
