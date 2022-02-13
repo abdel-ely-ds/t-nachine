@@ -7,7 +7,8 @@ import { SiSlideshare } from "react-icons/si";
 
 export const GridLayout = styled.div`
   display: grid;
-  grid-gap: 2rem;
+  grid-column-gap: 5rem;
+  grid-row-gap: 1rem;
   grid-template-areas:
     "header header"
     "asideLeft1  asideRight1"
