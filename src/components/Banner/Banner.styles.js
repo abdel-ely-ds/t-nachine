@@ -64,7 +64,7 @@ export const DetailsContainer = styled.div`
 `;
 
 export const Details = styled.p`
-  font-weight: 100px;
+  font-weight: bold;
   font-size: 25px;
   line-height: 40px;
   letter-spacing: 0.25px;
@@ -87,7 +87,7 @@ export const BacktestModeContainer = styled.div`
   padding: 24px 24px 10px;
   margin: 0px;
   @media only screen and (max-width: 500px) {
-    padding: 10px 10px 5px;
+    padding: 15px 15px 5px;
   }
 `;
 
@@ -111,16 +111,16 @@ export const BacktestMode = styled.button`
       activated ? "rgb(45, 48, 49)" : "rgb(194, 35, 206)"};
   }
   @media only screen and (max-width: 500px) {
-    font-size: 10px;
+    font-size: 12px;
     padding: 8px 10px;
   }
 `;
 
 export const StrategyContainer = styled.div`
   display: block;
-  padding: 0px 24px 10px;
+  padding: 5px 24px 10px;
   @media only screen and (max-width: 500px) {
-    padding: 0px 10px 5px;
+    padding: 5px 10px 5px;
   }
 `;
 
@@ -139,7 +139,7 @@ export const RuleHeader = styled.h1`
   display: flex;
   align-items: center;
   @media only screen and (max-width: 500px) {
-    font-size: 22px;
+    font-size: 20px;
   }
 `;
 
