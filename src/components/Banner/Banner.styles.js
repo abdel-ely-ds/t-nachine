@@ -64,7 +64,7 @@ export const DetailsContainer = styled.div`
 `;
 
 export const Details = styled.p`
-  font-weight: bold;
+  font-weight: 400px;
   font-size: 25px;
   line-height: 40px;
   letter-spacing: 0.25px;
