@@ -139,7 +139,7 @@ export const RuleHeader = styled.h1`
   display: flex;
   align-items: center;
   @media only screen and (max-width: 500px) {
-    font-size: 25px;
+    font-size: 22px;
   }
 `;
 
@@ -194,6 +194,6 @@ export const RuleIcon = styled(GiPencilRuler)`
   margin-right: 20px;
   font-size: 50px;
   @media only screen and (max-width: 500px) {
-    font-size: 35px;
+    font-size: 30px;
   }
 `;
