@@ -12,7 +12,7 @@ export const GridLayout = styled.div`
     "leftHero rightHero";
   grid-template-rows: 1fr 7fr 7fr;
   grid-template-columns: 1fr 1fr;
-  padding: 0px 110px 100px;
+  padding: 5px 110px 100px;
   @media only screen and (max-width: 500px) {
     padding-left: 10px;
     padding-right: 10px;
