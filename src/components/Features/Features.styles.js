@@ -9,6 +9,7 @@ export const GridLayout = styled.div`
   display: grid;
   grid-gap: 2rem;
   grid-template-areas:
+    "header header"
     "asideLeft1  asideRight1"
     "asideLeft2 asideRight2";
   grid-template-rows: 2fr 4fr 4fr;

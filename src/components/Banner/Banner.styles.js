@@ -7,12 +7,16 @@ export const GridLayout = styled.div`
   display: grid;
   grid-gap: 4rem;
   grid-template-areas:
-    "navbar navbar"
     "leftHero rightHero"
     "leftHero rightHero";
-  grid-template-rows: 1fr 7fr 7fr;
+  grid-template-rows: 1fr 6fr;
   grid-template-columns: 1fr 1fr;
-  padding: 5px 110px 100px;
+  padding-left: 110px;
+  padding-right: 110px;
+  padding-bottom: 50px;
+  padding-top: 60px;
+  justify-content: center;
+  align-items: center;
   @media only screen and (max-width: 500px) {
     padding-left: 10px;
     padding-right: 10px;
@@ -38,7 +42,6 @@ export const RightHeroContainer = styled.aside`
   align-items: center;
   background-color: rgb(40, 42, 54);
   border-radius: 10px;
-  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
 `;
 
 export const HeaderContainer = styled.div`
