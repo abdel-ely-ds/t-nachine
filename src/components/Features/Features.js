@@ -1,80 +1,71 @@
 import {
-  Header,
-  FeaturesContainer,
+  GridLayout,
   HeaderContainer,
-  ProductItemContainer,
-  ProductItemDescription,
+  Header,
+  ProductItemDescriptionContainer,
   ProductTitle,
+  ProductDetails,
   Brain,
   Test,
   Optimization,
   Share,
-  ProductTitleDetails,
+  AsideLeft1,
+  AsideLeft2,
+  AsideRight1,
+  AsideRight2,
 } from "./Features.styles";
-
-import strategy from "../../assets/strategy.png";
-import "animate.css/animate.min.css";
-import ScrollAnimation from "react-animate-on-scroll";
 
 const Features = () => {
   return (
     <>
-      <FeaturesContainer>
+      <GridLayout>
         <HeaderContainer>
           <Header>Our Core Products</Header>
         </HeaderContainer>
 
-        <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" duration={10}>
-          <ProductItemContainer>
-            <Brain />
-            <ProductItemDescription>
-              <ProductTitle>Write it.</ProductTitle>
-              <ProductTitleDetails>
-                Easily write powerful strategies in minutes, without having to
-                write any line of code.
-              </ProductTitleDetails>
-            </ProductItemDescription>
-          </ProductItemContainer>
-        </ScrollAnimation>
+        <AsideLeft1>
+          <Brain />
+          <ProductItemDescriptionContainer>
+            <ProductTitle>Write it.</ProductTitle>
+            <ProductDetails>
+              Easily write powerful strategies in minutes, without having to
+              write any line of code.
+            </ProductDetails>
+          </ProductItemDescriptionContainer>
+        </AsideLeft1>
 
-        <ScrollAnimation animateIn="fadeIn" delay={20}>
-          <ProductItemContainer>
-            <Test />
-            <ProductItemDescription>
-              <ProductTitle>Backtest it.</ProductTitle>
-              <ProductTitleDetails>
-                Get a full set of metrics to measure success in a split of a
-                second.
-              </ProductTitleDetails>
-            </ProductItemDescription>
-          </ProductItemContainer>
-        </ScrollAnimation>
+        <AsideRight1>
+          <Test />
+          <ProductItemDescriptionContainer>
+            <ProductTitle>Backtest it.</ProductTitle>
+            <ProductDetails>
+              Get a full set of metrics to measure success in a split of a
+              second.
+            </ProductDetails>
+          </ProductItemDescriptionContainer>
+        </AsideRight1>
 
-        <ScrollAnimation animateIn="fadeIn" delay={20}>
-          <ProductItemContainer>
-            <Optimization />
-            <ProductItemDescription>
-              <ProductTitle>Optmize it.</ProductTitle>
-              <ProductTitleDetails>
-                We use artificial intelligence to improve the performance of
-                your strategy.
-              </ProductTitleDetails>
-            </ProductItemDescription>
-          </ProductItemContainer>
-        </ScrollAnimation>
+        <AsideLeft2>
+          <Optimization />
+          <ProductItemDescriptionContainer>
+            <ProductTitle>Optmize it.</ProductTitle>
+            <ProductDetails>
+              We use artificial intelligence to improve the performance of your
+              strategy.
+            </ProductDetails>
+          </ProductItemDescriptionContainer>
+        </AsideLeft2>
 
-        <ScrollAnimation animateIn="fadeIn" delay={20}>
-          <ProductItemContainer>
-            <Share />
-            <ProductItemDescription>
-              <ProductTitle>Share it.</ProductTitle>
-              <ProductTitleDetails>
-                Share you strategy with others and build your network.
-              </ProductTitleDetails>
-            </ProductItemDescription>
-          </ProductItemContainer>
-        </ScrollAnimation>
-      </FeaturesContainer>
+        <AsideRight2>
+          <Share />
+          <ProductItemDescriptionContainer>
+            <ProductTitle>Share it.</ProductTitle>
+            <ProductDetails>
+              Share you strategy with others and build your network.
+            </ProductDetails>
+          </ProductItemDescriptionContainer>
+        </AsideRight2>
+      </GridLayout>
     </>
   );
 };
