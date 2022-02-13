@@ -12,11 +12,11 @@ export const StyledButton = styled.button`
   cursor: pointer;
   border: none;
   background-color: ${({ primary, special }) =>
-    primary || special ? "#3b62e5" : "#fff"};
+    primary || special ? "blue" : "#fff"};
   transition: all 0.5s ease;
 
   &:hover {
-    background-color: ${({ primary }) => (primary ? "#3898ec" : "#fff")};
+    background-color: ${({ primary }) => (primary ? "blue" : "#fff")};
     color: ${({ primary }) => (primary ? "#fff" : "#3195ff")};
   }
 `;
