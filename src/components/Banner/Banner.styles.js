@@ -41,7 +41,7 @@ export const RightHeroContainer = styled.aside`
   grid-area: rightHero;
   display: block;
   align-items: center;
-  background-color: rgb(40, 42, 54);
+  background-color: rgb(48, 13, 79);
   border-radius: 10px;
 `;
 

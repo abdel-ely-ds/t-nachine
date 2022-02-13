@@ -57,12 +57,11 @@ export const AsideRight2 = styled.aside`
 export const HeaderContainer = styled.header`
   grid-area: header;
   background: blue;
-  vertical-align: middle;
 `;
 export const Header = styled.h1`
   font-size: 70px;
   letter-spacing: 0.5px;
-  font-weight: 600px;
+  font-weight: 500px;
   color: white;
   @media only screen and (max-width: 500px) {
     font-size: 30px;

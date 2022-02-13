@@ -23,6 +23,7 @@ import {
 } from "./Banner.styles";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { fontSize } from "@mui/system";
 
 const codeSnippet = `
 from t_nachine.backtester import Strategy
@@ -61,8 +62,9 @@ const Banner = () => {
           </HeaderContainer>
           <DetailsContainer>
             <Details>
-              We provide you with a set of great tools to measure the{" "}
-              <b>performance</b> of your Strategy with full statistical details.
+              We provide you with a set of great tools to measure the
+              <b> performance</b> of your Strategy with full statistical
+              details.
               <b>When</b> and <b>Where</b> your strategy does work.
             </Details>
           </DetailsContainer>
@@ -86,7 +88,23 @@ const Banner = () => {
           </BacktestModeContainer>
           <StrategyContainer>
             {activated ? (
-              <SyntaxHighlighter language="python" style={dracula}>
+              <SyntaxHighlighter
+                language="python"
+                style={dracula}
+                customStyle={{
+                  lineHeight: "1.5",
+                  fontSize: "1em",
+                  background: "rgb(48, 13, 79)",
+                }}
+                codeTagProps={{
+                  style: {
+                    lineHeight: "inherit",
+                    fontSize: "inherit",
+                    background: "inherit",
+                    fontFamily: "inherit",
+                  },
+                }}
+              >
                 {codeSnippet}
               </SyntaxHighlighter>
             ) : (
