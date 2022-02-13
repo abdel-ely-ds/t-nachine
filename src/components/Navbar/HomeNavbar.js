@@ -32,7 +32,9 @@ const Navbar = () => {
       <IconContext.Provider value={{ color: "#000" }}>
         <Nav>
           <NavbarContainer>
-            <NavLogo to="/">T-Nachine</NavLogo>
+            <NavLogo to="/">
+              <b>T-Nachine</b>
+            </NavLogo>
 
             <Menu>
               <MenuItemDropDown
@@ -90,13 +92,17 @@ const Navbar = () => {
             <Menu>
               <MenuItemBtn>
                 <Link to="/login">
-                  <Button>Log in</Button>
+                  <Button>
+                    <b>Log in</b>
+                  </Button>
                 </Link>
               </MenuItemBtn>
 
               <MenuItemBtn>
                 <Link to="/signup">
-                  <Button primary>Sign up</Button>
+                  <Button primary>
+                    <b>Sign up</b>
+                  </Button>
                 </Link>
               </MenuItemBtn>
             </Menu>

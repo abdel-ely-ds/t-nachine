@@ -16,7 +16,7 @@ export const StyledButton = styled.button`
   transition: all 0.5s ease;
 
   &:hover {
-    background-color: ${({ primary }) => (primary ? "blue" : "#fff")};
+    background-color: ${({ primary }) => (primary ? "#3898ec" : "#fff")};
     color: ${({ primary }) => (primary ? "#fff" : "#3195ff")};
   }
 `;
