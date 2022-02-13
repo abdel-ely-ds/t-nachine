@@ -20,6 +20,7 @@ export const GridLayout = styled.div`
   @media only screen and (max-width: 500px) {
     padding-left: 10px;
     padding-right: 10px;
+    padding-top: 10px;
     grid-template-areas:
       "leftHero"
       "leftHero"
