@@ -107,7 +107,7 @@ export const Brain = styled(SiMusicbrainz)`
   font-size: 120px;
   border-radius: 50%;
   @media only screen and (max-width: 500px) {
-    font-size: 90px;
+    font-size: 75px;
   }
 `;
 
@@ -117,7 +117,7 @@ export const Optimization = styled(GiArtificialIntelligence)`
   color: white;
   border-radius: 30px;
   @media only screen and (max-width: 500px) {
-    font-size: 90px;
+    font-size: 75px;
   }
 `;
 
@@ -127,8 +127,8 @@ export const Test = styled(SiSimpleanalytics)`
   border-radius: 20px;
   color: white;
   @media only screen and (max-width: 500px) {
-    font-size: 90px;
-    border-radius: 25px;
+    font-size: 75px;
+    border-radius: 20px;
   }
 `;
 
@@ -137,7 +137,7 @@ export const Share = styled(SiSlideshare)`
   color: white;
   border-radius: 30px;
   @media only screen and (max-width: 500px) {
-    font-size: 90px;
-    border-radius: 25px;
+    font-size: 75px;
+    border-radius: 20px;
   }
 `;

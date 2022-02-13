@@ -48,7 +48,7 @@ const Features = () => {
         <AsideLeft2>
           <Optimization />
           <ProductItemDescriptionContainer>
-            <ProductTitle>Optmize it.</ProductTitle>
+            <ProductTitle>Optimize it.</ProductTitle>
             <ProductDetails>
               We use artificial intelligence to improve the performance of your
               strategy.

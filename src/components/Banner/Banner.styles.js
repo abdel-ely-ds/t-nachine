@@ -2,68 +2,85 @@ import styled from "styled-components";
 import { BsFillCheckCircleFill } from "react-icons/bs";
 import { FcCandleSticks } from "react-icons/fc";
 import { GiPencilRuler } from "react-icons/gi";
-export const BannerContainer = styled.div`
-  margin: 0px;
-  display: flex;
-  padding: 100px 100px 0px;
-  margin-bottom: 100px;
-  height: 90vh;
+
+export const GridLayout = styled.div`
+  display: grid;
+  grid-gap: 4rem;
+  grid-template-areas:
+    "navbar navbar"
+    "leftHero rightHero"
+    "leftHero rightHero";
+  grid-template-rows: 1fr 7fr 7fr;
+  grid-template-columns: 1fr 1fr;
+  padding: 0px 110px 100px;
+  @media only screen and (max-width: 500px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-template-areas:
+      "leftHero"
+      "leftHero"
+      "leftHero"
+      "rightHero"
+      "rightHero";
+    grid-template-columns: 1fr;
+  }
 `;
 
-export const HeroLeft = styled.div`
-  float: left;
+export const LeftHeroContainer = styled.aside`
+  grid-area: leftHero;
   display: block;
-  width: 50%;
-  padding-right: 5px;
-  padding-left: 5px;
-  margin-right: 30px;
-  height: 100%;
-  margin-top: 60px;
+  align-items: center;
 `;
 
-export const HeroRight = styled.div`
-  float: right;
+export const RightHeroContainer = styled.aside`
+  grid-area: rightHero;
   display: block;
-  width: 50%;
-  max-height: 90%;
-  padding: 10px;
+  align-items: center;
   background-color: rgb(40, 42, 54);
   border-radius: 10px;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
 `;
 
-export const Title = styled.h1`
+export const HeaderContainer = styled.div`
+  padding-bottom: 10px;
+  text-align: center;
+`;
+export const Header = styled.h1`
   font-size: 80px;
   line-height: 100px;
   letter-spacing: 0.5px;
   font-weight: 600px;
   display: block;
+`;
+
+export const DetailsContainer = styled.div`
+  padding-bottom: 30px;
+  vertical-align: middle;
   text-align: center;
 `;
 
-export const TitleDetails = styled.p`
+export const Details = styled.p`
   font-weight: 100px;
   font-size: 25px;
   line-height: 40px;
   letter-spacing: 0.25px;
-  margin-top: 24px;
-  margin-bottom: 16px;
-  text-align: center;
 `;
 
-export const FreeTrial = styled.div`
+export const FreeTrialButtonContainer = styled.div`
+  padding-bottom: 10px;
+  vertical-align: middle;
   display: flex;
   justify-content: center;
-  margin-top: 50px;
 `;
 
-export const BacktestMode = styled.div`
+export const BacktestModeContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 24px 24px 16px;
+  padding: 24px 24px 10px;
   margin: 0px;
 `;
 
-export const BacktestModeBtn = styled.button`
+export const BacktestMode = styled.button`
   color: #fff;
   font-size: 16px;
   font-weight: bold;
@@ -83,18 +100,46 @@ export const BacktestModeBtn = styled.button`
   }
 `;
 
-export const CodeSampleName = styled.p`
-  background-color: rgb(45, 48, 49);
-  padding: 2px 10px;
-  color: #fff;
-  border-radius: 6px 6px 0px 0px;
-`;
-
 export const StrategyContainer = styled.div`
   display: block;
-  padding: 5px 24px 16px;
-  margin: 0px;
+  padding: 0px 24px 10px;
+`;
+
+export const RulesContainer = styled.div`
+  display: block;
+  padding: 10px;
+  @media only screen and (max-width: 500px) {
+    padding: 0px;
+  }
+`;
+
+export const RuleHeader = styled.h1`
+  color: #f7b42c;
+  font-size: 35px;
+  font-weight: 900px;
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width: 500px) {
+    font-size: 25px;
+  }
+`;
+
+export const RuleDescription = styled.span`
   color: white;
+  font-size: 1.6rem;
+  line-height: 1.6px;
+  font-weight: bold;
+  @media only screen and (max-width: 500px) {
+    font-size: 1.2rem;
+    line-height: 1.2px;
+  }
+`;
+export const SignalIcon = styled(FcCandleSticks)`
+  margin-right: 20px;
+  font-size: 60px;
+  @media only screen and (max-width: 500px) {
+    font-size: 35px;
+  }
 `;
 
 export const RulesMenu = styled.ul`
@@ -103,39 +148,33 @@ export const RulesMenu = styled.ul`
 `;
 
 export const RuleItem = styled.li`
-  list-style: none;
-  align-items: center;
   margin: 16px 30px;
+  color: white;
   font-weight: bold;
-`;
-
-export const RuleItemContainer = styled.div`
+  list-style: none;
   display: flex;
+  align-items: center;
+  @media only screen and (max-width: 500px) {
+    margin: 16px 20px;
+  }
 `;
 
-export const RuleHeader = styled.h1`
-  color: #f7b42c;
-  font: 60px;
-  font-weight: 900px;
-`;
-
-export const Check = styled(BsFillCheckCircleFill)`
+export const CheckIcon = styled(BsFillCheckCircleFill)`
   margin-right: 20px;
   margin-left: 20px;
   color: rgb(114, 255, 114);
   font-size: 25px;
-  vertical-align: bottom;
+  @media only screen and (max-width: 500px) {
+    margin-right: 10px;
+    margin-left: 0px;
+    font-size: 18px;
+  }
 `;
 
-export const Signal = styled(FcCandleSticks)`
+export const RuleIcon = styled(GiPencilRuler)`
   margin-right: 20px;
-  font-size: 60px;
-  vertical-align: bottom;
-`;
-
-export const Rule = styled(GiPencilRuler)`
-  margin-top: 15px;
-  margin-right: 30px;
   font-size: 50px;
-  vertical-align: bottom;
+  @media only screen and (max-width: 500px) {
+    font-size: 35px;
+  }
 `;
