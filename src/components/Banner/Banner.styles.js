@@ -14,8 +14,8 @@ export const GridLayout = styled.div`
   grid-template-columns: 1fr 1fr;
   padding: 0px 110px 100px;
   @media only screen and (max-width: 500px) {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     grid-template-areas:
       "leftHero"
       "leftHero"
@@ -51,6 +51,10 @@ export const Header = styled.h1`
   letter-spacing: 0.5px;
   font-weight: 600px;
   display: block;
+  @media only screen and (max-width: 500px) {
+    font-size: 60px;
+    line-height: 80px;
+  }
 `;
 
 export const DetailsContainer = styled.div`
@@ -64,6 +68,10 @@ export const Details = styled.p`
   font-size: 25px;
   line-height: 40px;
   letter-spacing: 0.25px;
+  @media only screen and (max-width: 500px) {
+    font-size: 15px;
+    line-height: 20px;
+  }
 `;
 
 export const FreeTrialButtonContainer = styled.div`
@@ -78,6 +86,9 @@ export const BacktestModeContainer = styled.div`
   justify-content: center;
   padding: 24px 24px 10px;
   margin: 0px;
+  @media only screen and (max-width: 500px) {
+    padding: 10px 10px 5px;
+  }
 `;
 
 export const BacktestMode = styled.button`
@@ -89,6 +100,7 @@ export const BacktestMode = styled.button`
   outline: none;
   border: none;
   transition: all 0.1s ease 0s;
+
   border-radius: ${({ left }) =>
     left ? "6px 0px 0px 6px" : "0px 6px 6px 0px"};
   background-color: ${({ activated }) =>
@@ -98,11 +110,18 @@ export const BacktestMode = styled.button`
     background-color: ${({ activated }) =>
       activated ? "rgb(45, 48, 49)" : "rgb(194, 35, 206)"};
   }
+  @media only screen and (max-width: 500px) {
+    font-size: 10px;
+    padding: 8px 10px;
+  }
 `;
 
 export const StrategyContainer = styled.div`
   display: block;
   padding: 0px 24px 10px;
+  @media only screen and (max-width: 500px) {
+    padding: 0px 10px 5px;
+  }
 `;
 
 export const RulesContainer = styled.div`
@@ -155,7 +174,7 @@ export const RuleItem = styled.li`
   display: flex;
   align-items: center;
   @media only screen and (max-width: 500px) {
-    margin: 16px 20px;
+    margin: 10px 12px;
   }
 `;
 
