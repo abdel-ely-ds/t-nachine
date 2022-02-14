@@ -17,6 +17,7 @@ export const GridLayout = styled.div`
   grid-template-columns: 1fr 1fr;
   padding-left: 110px;
   padding-right: 110px;
+  padding-bottom: 50px;
   background: blue;
   @media only screen and (max-width: 500px) {
     padding-left: 20px;

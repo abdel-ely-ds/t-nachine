@@ -23,7 +23,6 @@ import {
 } from "./Banner.styles";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { fontSize } from "@mui/system";
 
 const codeSnippet = `
 from t_nachine.backtester import Strategy

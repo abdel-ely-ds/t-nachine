@@ -13,8 +13,8 @@ export const GridLayout = styled.div`
   grid-template-columns: 1fr 1fr;
   padding-left: 110px;
   padding-right: 110px;
-  padding-bottom: 50px;
-  padding-top: 60px;
+  padding-bottom: 40px;
+  padding-top: 40px;
   justify-content: center;
   align-items: center;
   @media only screen and (max-width: 500px) {

@@ -20,6 +20,9 @@ export const NavbarContainer = styled(Container)`
   align-items: center;
   height: 60px;
   ${Container};
+  @media only screen and (max-width: 500px) {
+    padding-left: 20px;
+    padding-right: 20px;
 `;
 
 export const NavLogo = styled(Link)`
@@ -28,12 +31,19 @@ export const NavLogo = styled(Link)`
   display: flex;
   align-items: center;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   transition: all 0.5s ease;
   &:hover {
     color: #3195ff;
   }
+`;
+
+export const Logo = styled.img`
+  width: 35px;
+  height: 25px;
+  padding-right: 10px;
+  border-radius: 10px;
 `;
 
 export const Menu = styled.ul`

@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 
@@ -35,34 +35,18 @@ body{
 export default GlobalStyles;
 
 export const Container = styled.div`
-margin: 0px;
-padding: 0;
-max-width: 1300px;
-width: 100%;
-
-@media (max-width:400px){
-    padding: 0 10px;
-}
-@media (max-width:991px) {
-    padding: 0 30px;
-}
-
-@media (min-width: 1500px) {
-    max-width: 1500px;
-}
-
-@media (min-width: 1800px) {
-    max-width: 1800px;
-    padding: 0 30px;
-}
+  margin: 0px;
+  padding-left: 110px;
+  padding-right: 110px;
+  width: 100%;
 `;
 
 export const heading = styled.h1`
-font-size: 40px;
-line-height: 44px;
-letter-spacing: 0.5px;
-font-weight: 600px;
-display: block;
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 0.5px;
+  font-weight: 600px;
+  display: block;
 `;
 
-<GlobalStyles />
+<GlobalStyles />;

@@ -21,6 +21,7 @@ import {
   Nav,
   NavbarContainer,
   NavLogo,
+  Logo,
 } from "./Navbar.styles";
 
 const Navbar = () => {
@@ -33,7 +34,8 @@ const Navbar = () => {
         <Nav>
           <NavbarContainer>
             <NavLogo to="/">
-              <b>T-Nachine</b>
+              <Logo src="logo.png" />
+              <span>T-Nachine</span>
             </NavLogo>
 
             <Menu>
